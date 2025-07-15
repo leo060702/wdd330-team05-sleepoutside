@@ -1,0 +1,23 @@
+[
+  {
+    "id": "acc01",
+    "name": "Hiking Water Bottle",
+    "image": "/images/accessories/water-bottle.jpg",
+    "description": "A lightweight and durable water bottle perfect for long hikes.",
+    "price": 14.99
+  },
+  {
+    "id": "acc02",
+    "name": "Camping Headlamp",
+    "image": "/images/accessories/headlamp.jpg",
+    "description": "LED headlamp with adjustable brightness and long battery life.",
+    "price": 24.95
+  },
+  {
+    "id": "acc03",
+    "name": "Trekking Poles",
+    "image": "/images/accessories/trekking-poles.jpg",
+    "description": "Aluminum trekking poles with ergonomic grip and adjustable length.",
+    "price": 39.99
+  }
+]
