@@ -4,17 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sleep Outside | Checkout</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <!-- 修正后的 CSS 路径 -->
+  <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
   <header class="divider">
     <div class="logo">
-      <img src="images/noun_Tent_2517.svg" alt="Tent logo" />
-      <a href="index.html">Sleep <span class="highlight">Outside</span></a>
+      <!-- 修正后的图片路径 -->
+      <img src="../images/noun_Tent_2517.svg" alt="Tent logo" />
+      <a href="../index.html">Sleep <span class="highlight">Outside</span></a>
     </div>
     <div class="cart">
-      <a href="cart/">
-        <img src="images/cart.svg" alt="Cart" />
+      <a href="../cart/">
+        <!-- 新增的购物车图标文件（cart.svg） -->
+        <img src="../images/cart.svg" alt="Cart" />
       </a>
     </div>
   </header>
@@ -22,20 +25,29 @@
   <main class="divider">
     <section class="checkout-form">
       <h2>Review & Place Your Order</h2>
-      <form id="checkout-form">
-        <h3>Customer Information</h3>
-        <label>First Name: <input type="text" name="fname" required></label>
-        <label>Last Name: <input type="text" name="lname" required></label>
-        <h3>Address</h3>
-        <label>Street: <input type="text" name="street" required></label>
-        <label>City: <input type="text" name="city" required></label>
-        <label>State: <input type="text" name="state" required></label>
-        <label>Zip: <input type="text" name="zip" required></label>
-        <h3>Payment</h3>
-        <label>Card Number: <input type="text" name="cardNumber" required></label>
-        <label>Expiration: <input type="text" name="expiration" required></label>
-        <label>Security Code: <input type="text" name="code" required></label>
-        <button type="submit">Place Order</button>
+      <form id="checkout-form" novalidate>
+        <fieldset>
+          <legend>Customer Information</legend>
+          <label>First Name: <input type="text" name="fname" required></label>
+          <label>Last Name: <input type="text" name="lname" required></label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Address</legend>
+          <label>Street: <input type="text" name="street" required></label>
+          <label>City: <input type="text" name="city" required></label>
+          <label>State: <input type="text" name="state" required></label>
+          <label>Zip: <input type="text" name="zip" required></label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Payment</legend>
+          <label>Card Number: <input type="text" name="cardNumber" required></label>
+          <label>Expiration: <input type="text" name="expiration" required></label>
+          <label>Security Code: <input type="text" name="code" required></label>
+        </fieldset>
+
+        <button type="submit" class="btn-primary">Place Order</button>
       </form>
     </section>
 
@@ -48,10 +60,13 @@
     </section>
   </main>
 
-  <footer>&copy; NOT a real business</footer>
+  <footer>
+    <p>&copy; NOT a real business. For educational purposes only.</p>
+  </footer>
 
+  <!-- 修正后的 JS 路径 -->
   <script type="module">
-    import CheckoutProcess from './js/CheckoutProcess.mjs';
+    import CheckoutProcess from '../js/CheckoutProcess.mjs';
     const checkout = new CheckoutProcess();
     checkout.calculateOrderSummary();
   </script>
